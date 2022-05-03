@@ -5,4 +5,4 @@ var t,o=arguments[3];!function(o,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=require("notiflix/build/notiflix-notify-aio");const t=document.querySelector(".form");function i(t){t.preventDefault();let i=Number(t.currentTarget.delay.value);const n=Number(t.currentTarget.step.value),r=Number(t.currentTarget.amount.value);for(let u=1;u<=r;u+=1)o(u,i).then(({position:t,delay:i})=>{setTimeout(()=>{e.Notify.success(`✅ Fulfilled promise ${t} in ${i}ms`,{useIcon:!1})},i)}).catch(({position:t,delay:i})=>{setTimeout(()=>{e.Notify.failure(`❌ Rejected promise ${t} in ${i}ms`,{useIcon:!1})},i)}),i+=n}function o(e,t){const i=Math.random()>.3,o={position:e,delay:t};return new Promise((e,t)=>{i&&e(o),t(o)})}t.addEventListener("submit",i);
 },{"notiflix/build/notiflix-notify-aio":"MeeU"}]},{},["GyVV"], null)
-//# sourceMappingURL=/parcel-project-template/03-promises.fc32f0e8.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.fc32f0e8.js.map
